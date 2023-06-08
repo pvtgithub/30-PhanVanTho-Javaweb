@@ -1,0 +1,78 @@
+.box_category_container {
+    padding: 25px;
+
+}
+
+.box_category_container .box_category_item:not(:last-child) {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgb(174, 166, 166);
+}
+
+.box_category_container .box_category_item .nav_title :hover,
+.box_category_container .box_category_item .box_main_first :hover,
+.box_category_container .box_category_item .box_main_second :hover {
+    color: rgb(29, 140, 140);
+    cursor: pointer;
+}
+
+.box_category_container .box_category_item .nav_title {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.box_category_container .box_category_item .nav_title .title_main {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.box_category_container .box_category_item .nav_title .title_element {
+    font-size: 15px;
+}
+
+.box_category_container .box_category_item .box_main_first {
+    display: flex;
+}
+
+.box_category_container .box_category_item .box_main_first .main_first_1 {
+    width: 66%;
+    display: flex;
+    border-right: 1px solid rgb(172, 168, 175);
+}
+
+.box_category_container .box_category_item .box_main_first .main_first_1 img {
+    width: 50%;
+    padding: 15px 15px 15px 0;
+}
+
+.box_category_container .box_category_item .box_main_first .main_first_1 .content {
+    width: 50%;
+}
+
+.box_category_container .box_category_item .box_main_first .main_first_2 {
+    width: 33%;
+}
+
+.box_category_container .box_category_item .box_main_first .main_first_1 .content,
+.box_category_container .box_category_item .box_main_first .main_first_2 .content {
+    padding: 15px;
+}
+
+.box_category_container .box_category_item .box_main_second {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px 25px 0;
+    border-top: 1px solid rgb(157, 151, 151);
+}
+
+.box_category_container .box_category_item .box_main_second a {
+    text-decoration: none;
+    color: black;
+}
+
+.box_category_container .box_category_item .box_main_second .main_second {
+    display: flex;
+    font-weight: 600;
+}

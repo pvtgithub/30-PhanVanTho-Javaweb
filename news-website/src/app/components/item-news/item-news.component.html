@@ -1,0 +1,11 @@
+<div class="item_news_container">
+    <a [routerLink]="['/','news',i.code]" *ngFor="let i of fivenews">
+        <div class="item_news_item">
+            <span class="title">{{i.title}}</span>
+            <div class="group">
+                <img src="{{i.images[0].imageUrl}}" />
+                <span class="p-2">{{i.description}}</span>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,89 @@
+.footer_container {
+    padding: 0px 5%;
+}
+
+.footer_container .footer {
+    border-top: 3px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.footer_1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer_2 a,
+.footer_3 a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.contact_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_4 .item {
+    margin-left: 5px;
+}
+
+.downloand_app {
+    margin-top: 15px;
+}
+
+.downloand_app .button_dow {
+    height: 40px;
+    width: 170px;
+    border-radius: 10px;
+    padding: 7px;
+    background: #e5e5e5;
+    text-align: center;
+    cursor: pointer;
+}
+
+.downloand_app .button_dow span {
+    color: black;
+    opacity: 0.8;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.downloand_app img {
+    height: 20px;
+    width: 20px;
+}
+
+.hotline {
+    margin-top: 15px;
+    border-top: 1px solid gray;
+}
+
+.hotline a {
+    font-weight: 500;
+}
+
+.footer_second_2 img {
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.footer_second {
+    border-bottom: 1px solid gray;
+}
+
+.footer_second .title_footer {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rosybrown;
+}
+
+.footer_second span {
+    font-size: 18px;
+    font-weight: 400;
+
+}

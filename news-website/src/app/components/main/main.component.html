@@ -1,0 +1,19 @@
+<div class="main_container mt-4 mb-5">
+    <a [routerLink]="['/','news',newsBestView.code]">
+        <div class="first_main">
+            <img src="{{newsBestView.images[0].imageUrl}}" />
+            <div class="title">
+                <h4>{{newsBestView.title}}</h4>
+                <span>{{newsBestView.description}}</span>
+            </div>
+        </div>
+    </a>
+    <div class="d-flex other">
+        <a [routerLink]="['/','news',i.code]" class="link_other" *ngFor="let i of threeNews">
+            <div class="title_other">
+                <h5>{{i.title}}</h5>
+                <span>{{i.description}}</span>
+            </div>
+        </a>
+    </div>
+</div>

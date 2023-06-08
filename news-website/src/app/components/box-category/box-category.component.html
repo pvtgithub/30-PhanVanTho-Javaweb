@@ -1,0 +1,99 @@
+<div class="box_category_container">
+    <div class="box_category_item">
+        <div class="nav_title">
+            <div class="title_main"><a>Kinh doanh</a></div>
+            <a class="text-decoration-none text-secondary" [routerLink]="['/']" *ngFor="let i of allThemeKinhDoanh">
+                <div class="title_element">{{i.name}}</div>
+            </a>
+
+        </div>
+        <div class="box_main_first">
+            <div class="main_first_1">
+                <img src="{{twoNews[0][0].images[0].imageUrl}}" />
+                <div class="content">
+                    <strong class="title">{{twoNews[0][0].title}}</strong>
+                    <p class="description">{{twoNews[0][0].description}}</p>
+                </div>
+            </div>
+            <div class="main_first_2">
+                <div class="content">
+                    <strong class="title">{{twoNews[0][1].title}}</strong>
+                    <p class="description">{{twoNews[0][1].description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="box_main_second">
+            <a *ngFor="let i of threeNews[1]" [routerLink]="['/','news',i.code]">
+                <div class="main_second">
+                    <fa-icon class="text-secondary" [icon]="faDot"></fa-icon>
+                    <div class="title">{{i.title}}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="box_category_item">
+        <div class="nav_title">
+            <div class="title_main"><a>Khoa Học</a></div>
+            <a class="text-decoration-none text-secondary" [routerLink]="['/']" *ngFor="let i of allThemeKhoaHoc">
+                <div class="title_element">{{i.name}}</div>
+            </a>
+        </div>
+        <div class="box_main_first">
+            <div class="main_first_1">
+                <img src="{{twoNews[1][0].images[0].imageUrl}}" />
+                <div class="content">
+                    <strong class="title">{{twoNews[1][0].title}}</strong>
+                    <p class="description">{{twoNews[1][0].description}}</p>
+                </div>
+            </div>
+            <div class="main_first_2">
+                <div class="content">
+                    <strong class="title">{{twoNews[1][1].title}}</strong>
+                    <p class="description">{{twoNews[1][1].description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="box_main_second">
+            <a *ngFor="let i of threeNews[2]" [routerLink]="['/','news',i.code]">
+                <div class="main_second">
+                    <fa-icon class="text-secondary" [icon]="faDot"></fa-icon>
+                    <div class="title">{{i.title}}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="box_category_item">
+        <div class="nav_title">
+            <div class="title_main"><a>Giải Trí</a></div>
+            <a class="text-decoration-none text-secondary" [routerLink]="['/']" *ngFor="let i of allThemeGiaiTri">
+                <div class="title_element">{{i.name}}</div>
+            </a>
+        </div>
+        <div class="box_main_first">
+            <div class="main_first_1">
+                <img src="{{twoNews[2][0].images[0].imageUrl}}" />
+                <div class="content">
+                    <strong class="title">{{twoNews[2][0].title}}</strong>
+                    <p class="description">{{twoNews[2][0].description}}</p>
+                </div>
+            </div>
+            <div class="main_first_2">
+                <div class="content">
+                    <strong class="title">{{twoNews[2][1].title}}</strong>
+                    <p class="description">{{twoNews[2][1].description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="box_main_second">
+            <a *ngFor="let i of threeNews[3]" [routerLink]="['/','news',i.code]">
+                <div class="main_second">
+                    <fa-icon class="text-secondary" [icon]="faDot"></fa-icon>
+                    <div class="title">{{i.title}}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

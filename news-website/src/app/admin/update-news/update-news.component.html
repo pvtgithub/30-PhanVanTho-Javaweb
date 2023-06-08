@@ -1,0 +1,65 @@
+<app-header-admin></app-header-admin>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2"><app-sidebar></app-sidebar></div>
+        <div class="col-sm-10">
+            <h3 class="text-center">Sửa bài viết</h3>
+            <div>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="my-form">
+                    <label for="topic-name-1">Tên bài viết:</label>
+                    <input id="topic-name-1" formControlName="title" type="text" class="input-field" [(ngModel)]="newsCurrent.title"/>
+                    <div *ngIf="myForm.controls['title'].hasError('required')" style="color: red;">title is required
+                    </div>
+
+                    <label for="topic-name-1">Mô tả bài viết:</label>
+                    <textarea id="topic-name-1" formControlName="description" type="text"
+                        class="input-field" [(ngModel)]="newsCurrent.description"></textarea>
+                    <div *ngIf="myForm.controls['description'].hasError('required')" style="color: red;">description is
+                        required</div>
+
+                    <label for="topic-name-2">Code:</label>
+                    <input id="topic-name-2" formControlName="code" type="text" class="input-field" [(ngModel)]="newsCurrent.code"/>
+                    <div *ngIf="myForm.controls['code'].hasError('required')" style="color: red;">Name is required</div>
+
+                    <label for="topic-category">Chọn thể loại:</label>
+                    <select id="topic-category" class="select-field" (change)="changeCategory($event)" [selectedIndex]="idCategoryCurrent">
+                        <option *ngFor="let i of allCategory">{{i.name}}</option>
+                    </select>
+
+                    <label for="topic-category">Chọn chủ đề:</label>
+                    <select id="topic-category" class="select-field" (change)="changeTheme($event)" [selectedIndex]="newsCurrent.themeId">
+                        <option *ngFor="let i of themes">{{i.name}}</option>
+                    </select>
+
+                    <label for="topic-category">Chọn tag:</label>
+                    <select id="topic-category" class="select-field" (change)="changeTag($event)">
+                        <option *ngFor="let i of allTag" value="{{i.id}}">{{i.name}}</option>
+                    </select>
+                    <div class="d-flex">
+                        <div *ngFor="let i of tagNames"  class="m-2">
+                            <span>{{i.name}}</span>
+                                <fa-icon class="btn btn-danger" [icon]="faRemove" (click)="deleteTag(i)"></fa-icon>
+                        </div>
+                    </div>
+
+                    <label for="topic-name-2">Link hình ảnh:</label>
+                    <input id="topic-name-2" formControlName="images" type="text" class="input-field"
+                        (change)="changeImg($event)" [(ngModel)]="newsCurrent.images[0].imageUrl"/>
+                    <div *ngIf="myForm.controls['images'].hasError('required')" style="color: red;">image is required
+                    </div>
+
+                    <label for="topic-name-1">Nội dung bài viết:</label>
+                    <textarea id="topic-name-1" formControlName="content" type="text" class="input-field" rows="7"
+                        cols="50" [(ngModel)]="newsCurrent.content"></textarea>
+                    <div *ngIf="myForm.controls['content'].hasError('required')" style="color: red;">content is required
+                    </div>
+
+                    <div class="d-flex mt-3">
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                        <button [disabled]="!myForm.valid" type="submit" class="submit-button m-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

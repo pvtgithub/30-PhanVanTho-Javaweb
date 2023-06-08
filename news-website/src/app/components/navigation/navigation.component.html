@@ -1,0 +1,10 @@
+<nav class="nav_container mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 nav">
+                <a [routerLink]="['/',i.categoryCode,i.code]" routerLinkActive="selected" *ngFor="let i of themes"
+                    class="nav_category">{{i.name}}</a>
+            </div>
+        </div>
+    </div>
+</nav>

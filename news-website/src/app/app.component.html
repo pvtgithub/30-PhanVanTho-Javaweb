@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+<div appScrollListener class="onTop" (click)="goToTop()">
+    <fa-icon [icon]="onTop" class="iconOnTop"></fa-icon>
+</div>
+<div *ngIf="isLoading" class="loading">
+    <!-- Hiển thị spinner loading -->
+    <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+</div>

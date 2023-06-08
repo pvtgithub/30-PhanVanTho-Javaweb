@@ -1,0 +1,62 @@
+<header class="header_container py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="logo_container">
+                    <img src="assets/images/home/logo.png" />
+                </div>
+            </div>
+            <div class="header_first col-10 d-flex justify-content-between align-items-center">
+                <div class="time_container">
+                    {{ getDate | replaceDate }}
+                </div>
+                <div>
+                    <fa-icon class="text-secondary" [icon]="fa.faClock"></fa-icon>
+                    <span>Mới nhất</span>
+                </div>
+                <div>
+                    <fa-icon class="text-secondary" [icon]="fa.faLocation"></fa-icon>
+                    <span>Tin theo khu vực</span>
+                </div>
+                <div>
+                    <form class="d-flex">
+                        <input class="border border-3 border-top-0 border-start-0 border-end-0" type="search"
+                            placeholder="Bạn cần tìm gì?" aria-label="Search" style=" outline: none;">
+                        <button class="btn btn_search" type="submit">Tìm kiếm </button>
+                    </form>
+                </div>
+                <div #loginButton class="login">
+                        <a [routerLink]="['/','admin']" class="text-decoration-none text-secondary">
+                            <fa-icon [icon]="fa.faUser"></fa-icon>
+                            <span>Adminator</span>
+                        </a>
+                        <!-- <fa-icon class="text-secondary" [icon]="fa.faUser"></fa-icon>
+                        <span>Đăng nhập</span> -->
+                </div>
+            </div>
+        </div>
+        <div appSetFixedWhenScroll class="header_second">
+            <div class="row">
+                <div class="col_item col-12 d-flex align-items-center justify-content-between">
+                    <a [routerLink]="'/home'"><fa-icon routerLinkActive="selected" class="link_category"
+                            [icon]="fa.faHome"></fa-icon></a>
+                    <div class="setup item_category" *ngFor="let item of allCategory"
+                        (mouseenter)="onMouseEnter(item.id,item.name)" (mouseleave)="onMouseLeave()">
+                        <a [routerLink]="['/',item.code]" routerLinkActive="selected"
+                            class="link_category">{{item.name}}</a>
+                    </div>
+
+                    <div (click)="setCheckAll()" class="all_category_menu" [style.color]="colorAll">
+                        <span>Tất cả</span>
+                        <fa-icon *ngIf="colorAll == 'gray'" [icon]="fa.faList"></fa-icon>
+                        <fa-icon *ngIf="colorAll == 'red'" [icon]="fa.faXmark"></fa-icon>
+                    </div>
+                </div>
+            </div>
+            <app-themeitem [displayStatus]="statusDisplay" [themeByCategory]="themeByCategory"
+                [newsByCategory]="newsByCategory"></app-themeitem>
+        </div>
+    </div>
+
+    <app-all-category *ngIf="checkAll" (checkAll)="setCheckAll()"></app-all-category>
+</header>

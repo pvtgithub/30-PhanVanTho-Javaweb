@@ -1,0 +1,25 @@
+<div class="main_theme_container">
+    <div #appItem appMyhover class="container theme_container" [style.display]="displayStatus">
+        <div class="row">
+            <div class="col-5 theme_item p-3">
+                <div class="title">
+                    <h4>{{themeByCategory[themeByCategory.length -1]}}</h4>
+                </div>
+                <div class="item d-flex flex-wrap">
+                    <a *ngFor="let item of themeByCategory">
+                        {{item.name}}
+                    </a>
+                </div>
+            </div>
+            <div class="col-7 hot_news py-3 d-flex">
+                <div *ngFor="let item of newsByCategory" class="item_hot_news d-flex flex-column">
+                    <img [src]="item.images[0].imageUrl" />
+                    <span>{{item.title}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="icon_close" (click)="hideThemeItem()">
+            <fa-icon [icon]="faClose"></fa-icon>
+        </div>
+    </div>
+</div>

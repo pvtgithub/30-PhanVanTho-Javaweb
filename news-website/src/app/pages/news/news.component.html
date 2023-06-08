@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="d-flex justify-content-between title_main">
+                <a [routerLink]="'a'"><h2>Category</h2></a>
+                <span>{{formatedDate}}</span>
+            </div>
+            <div class="d-flex mt-5">
+                <h3>{{newsDetail.title}}</h3>
+            </div>
+            <div>
+                <strong>
+                    <p>{{newsDetail.description}}</p>
+                </strong>
+
+                <img style="width: 100%; " [src]="newsDetail.images[0].imageUrl" />
+                <!-- <img style="width: 100%; " [src]="newsDetail.images[1].imageUrl"/> -->
+                <p style="font-size: 17px;">{{newsDetail.content}}</p>
+            </div>
+        </div>
+        <div class="col-sm-4 p-5">
+            <div class="title">
+                <h4>Chủ đề</h4>
+            </div>
+            <div class="d-flex flex-column gap-3 mt-3">
+                <a *ngFor="let i of fiveNews" [routerLink]="['/','news',i.code]">
+                    <div class="d-flex p-2 item_theme ">
+                        <img class="imgStyle" style="height: 150px; width: 140px;" [src]="i.images[0].imageUrl"/>
+                        <p class="p-1">{{i.title}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

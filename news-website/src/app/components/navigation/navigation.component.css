@@ -1,0 +1,23 @@
+.nav_container .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: rgb(64, 60, 60);
+    border-bottom: 1px solid rgb(64, 60, 60);
+}
+
+.nav_container .nav .nav_category {
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.nav_container .nav .nav_theme {
+    font-size: 18;
+    font-weight: 600;
+}
+.nav_container .nav     .selected{
+    color: rgb(29, 140, 140);
+}

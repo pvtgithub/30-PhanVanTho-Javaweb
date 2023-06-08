@@ -1,0 +1,54 @@
+.imgStyle {
+    object-fit: cover;
+
+}
+.item_theme{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+a:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.title{
+    border-bottom: 1px solid gray;
+
+}
+
+.title_main{
+    border-bottom: 1px solid gray;
+    margin-top: 40px;
+    align-items: center;
+}
+
+p {
+    margin-bottom: 1em; /* Khoảng cách dưới của mỗi đoạn văn */
+    line-height: 1.7; /* Độ cao của dòng */
+    text-align: justify;
+    padding: 40px 0 40px 0;
+    text-indent: 2em;
+  }
+  
+  p:first-child {
+    margin-top: 0; /* Bỏ khoảng cách trên đoạn văn đầu tiên */
+  }
+  
+  p:last-child {
+    margin-bottom: 0; /* Bỏ khoảng cách dưới của đoạn văn cuối cùng */
+  }
+  
+  p strong {
+    font-weight: bold; /* Định dạng văn bản in đậm */
+  }
+  
+  p em {
+    font-style: italic; /* Định dạng văn bản in nghiêng */
+  }
+  
+  p a {
+    color: blue; /* Màu chữ của liên kết */
+    text-decoration: underline; /* Gạch chân liên kết */
+  }

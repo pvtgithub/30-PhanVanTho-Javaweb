@@ -1,0 +1,68 @@
+.logo_container img {
+    height: 100px;
+    width: 120px;
+}
+
+.header_first {
+    margin-top: 25px;
+    height: 50px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.btn_search {
+    background-color: burlywood;
+}
+
+.fixed_menu {
+    position: fixed;
+    width: 86%;
+    top: 0;
+}
+
+.header_second {
+    height: 50px;
+    background-color: white;
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+
+.header_second .col_item {
+    padding: 0;
+    margin: 0;
+}
+
+.header_second .item_category {
+    height: 50px;
+    align-items: center;
+    padding-top: 10px;
+    width: 6.8%;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.header_second .link_category:hover {
+    cursor: pointer;
+    color: rgb(29, 140, 140);
+}
+
+.link_category {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+}
+
+.selected {
+    color: rgb(29, 140, 140);
+}
+
+.all_category_menu {
+    color: gray;
+    cursor: pointer;
+    width: 6.8%;
+    text-align: center;
+}
+
+.login {
+    cursor: pointer;
+}

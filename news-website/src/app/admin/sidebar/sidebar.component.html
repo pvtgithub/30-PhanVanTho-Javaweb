@@ -1,0 +1,42 @@
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" routerLinkActive="collapsed" [class.collapsed]="!isActive" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Quản lý bài viết
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" routerLinkActive="show"  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          
+            <a [routerLink]="['/','addnews']"><button type="button" class="btn btn-primary">Thêm bài viết</button></a>
+            <a [routerLink]="['/','listnews']"><button type="button" class="btn btn-primary mt-2">Danh sách bài viết</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" routerLinkActive="collapsed" [class.collapsed]="!isActive" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Chủ đề
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" routerLinkActive="show"  aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <a [routerLink]="['/','addtheme']"><button type="button" class="btn btn-primary">Thêm chủ đề</button></a>
+            <a [routerLink]="['/','listtheme']"><button type="button" class="btn btn-primary mt-2">Danh sách chủ đề</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" routerLinkActive="collapsed" [class.collapsed]="!isActive" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Thể loại
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" routerLinkActive="show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <a [routerLink]="['/','addcategory']"><button type="button" class="btn btn-primary">Thêm thể loại</button></a>
+            <a [routerLink]="['/','listcategory']"><button type="button" class="btn btn-primary mt-2">Danh sách thể loại</button></a>
+        </div>
+      </div>
+    </div>
+  </div>

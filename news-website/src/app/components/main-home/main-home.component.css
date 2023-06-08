@@ -1,0 +1,36 @@
+.main_container a {
+    text-decoration: none;
+    color: black;
+}
+
+.main_container .other {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.main_container .link_other {
+    width: 33%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.main_container .first_main {
+    display: flex;
+    background-color: #f7f7f7;
+}
+
+.main_container .first_main:hover,
+.main_container .link_other:hover {
+    cursor: pointer;
+    color: rgb(29, 140, 140);
+}
+
+.main_container .first_main img {
+    width: 60%;
+}
+
+.main_container .first_main .title {
+    width: 40%;
+    padding: 20px;
+}
